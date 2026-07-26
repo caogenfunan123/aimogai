@@ -9,7 +9,6 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.runtime.*
 import androidx.compose.ui.platform.LocalContext
 import androidx.core.content.ContextCompat
-import com.gituploader.data.FileScanner
 import com.gituploader.data.GitApiService
 import com.gituploader.data.TokenManager
 import com.gituploader.data.model.FileEntry
@@ -56,11 +55,11 @@ fun GitUploaderAppContent(tokenManager: TokenManager) {
             )
         } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R && needsPermission) {
             try {
-                val intent = android.provider.Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION
+                val intent = android.content.Intent(android.provider.Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION)
                 intent.data = android.net.Uri.parse("package:${context.packageName}")
                 context.startActivity(intent)
             } catch (e: Exception) {
-                val intent = android.provider.Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION
+                val intent = android.content.Intent(android.provider.Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION)
                 context.startActivity(intent)
             }
         }

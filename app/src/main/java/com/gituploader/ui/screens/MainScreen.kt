@@ -4,7 +4,6 @@ import android.os.Environment
 import android.widget.Toast
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -111,15 +110,6 @@ fun MainScreen(
                     Toast.LENGTH_LONG
                 ).show()
             }
-        }
-    }
-
-    // 对于Android 11以下的设备，使用传统文件选择
-    val legacyFolderPickerLauncher = rememberLauncherForActivityResult(
-        contract = ActivityResultContracts.OpenDocumentTree()
-    ) { uri ->
-        uri?.let {
-            Toast.makeText(context, "已选择文件夹", Toast.LENGTH_SHORT).show()
         }
     }
 

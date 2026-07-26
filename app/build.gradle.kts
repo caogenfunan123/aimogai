@@ -72,8 +72,5 @@ dependencies {
     // Coroutine
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
 
-    // Tree structure for directory traversal
-    implementation("io.github.nicholasgasior:component-tree:1.0.0")
-
     debugImplementation("androidx.compose.ui:ui-tooling")
 }

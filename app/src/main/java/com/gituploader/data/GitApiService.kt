@@ -4,15 +4,12 @@ import com.gituploader.data.model.FileEntry
 import com.gituploader.data.model.GitPlatform
 import com.gituploader.data.model.RepoConfig
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.flow
-import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.withContext
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.json.JSONObject
-import java.io.File
 import java.util.Base64
 import java.util.concurrent.TimeUnit
 
