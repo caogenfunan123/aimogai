@@ -85,7 +85,7 @@ fun MainScreen(
                 if (segments.size >= 2) {
                     File(Environment.getExternalStorageDirectory(), segments.last())
                 } else {
-                    File(Environment.getExternalStorageDirectory())
+                    File(Environment.getExternalStorageDirectory().path)
                 }
             } else {
                 File(path)
@@ -242,7 +242,7 @@ fun MainScreen(
                 }
             }
 
-            Spacer(modifier = Modifier.height(8.dp))
+            item { Spacer(modifier = Modifier.height(8.dp)) }
 
             // ===== 文件夹选择区域 =====
             item {
@@ -338,7 +338,7 @@ fun MainScreen(
                 }
             }
 
-            Spacer(modifier = Modifier.height(8.dp))
+            item { Spacer(modifier = Modifier.height(8.dp)) }
 
             // ===== 上传按钮 =====
             item {
@@ -506,8 +506,7 @@ private fun ProgressCard(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(6.dp),
-                color = DarkPrimary,
-                trackColor = DarkSurface.copy(alpha = 0.5f),
+                color = DarkPrimary
             )
             Spacer(modifier = Modifier.height(4.dp))
             Text(
