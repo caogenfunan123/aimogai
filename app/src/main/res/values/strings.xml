@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Git批量上传</string>
+    <string name="select_folder">选择文件夹</string>
+    <string name="repo_url">仓库地址</string>
+    <string name="repo_url_hint">https://github.com/user/repo.git 或 https://gitee.com/user/repo.git</string>
+    <string name="token">访问令牌</string>
+    <string name="token_hint">请输入HTTPS访问令牌</string>
+    <string name="branch">分支</string>
+    <string name="branch_hint">main</string>
+    <string name="commit_message">提交信息</string>
+    <string name="commit_message_hint">批量上传文件</string>
+    <string name="save_token">保存令牌</string>
+    <string name="start_upload">开始上传</string>
+    <string name="uploading">上传中...</string>
+    <string name="upload_complete">上传完成</string>
+    <string name="upload_failed">上传失败</string>
+    <string name="no_folder_selected">未选择文件夹</string>
+    <string name="permission_denied">权限被拒绝，请授予存储权限</string>
+    <string name="settings">设置</string>
+    <string name="clear_saved_token">清除已保存令牌</string>
+    <string name="file_count">文件数量: %d</string>
+    <string name="upload_progress">上传进度: %d/%d</string>
+    <string name="current_file">当前文件: %s</string>
+    <string name="save_success">令牌已保存</string>
+    <string name="save_failed">保存失败</string>
+</resources>
